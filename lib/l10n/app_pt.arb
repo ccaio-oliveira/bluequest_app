@@ -1,0 +1,12 @@
+{
+    "appTitle": "BlueQuest",
+    "email": "E-mail",
+    "password": "Senha",
+    "displayName": "Nome",
+    "timezone": "Fuso horário",
+    "login": "Entrar",
+    "register": "Criar conta",
+    "challenges": "Desafios",
+    "today": "Hoje",
+    "createChallenge": "Criar desafio"
+}
