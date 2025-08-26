@@ -1,5 +1,4 @@
 import 'package:bluequest_app/features/auth/presentation/providers.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -52,12 +51,13 @@ class _LoginPageState extends ConsumerState<LoginPage> {
                         ref.read(accessTokenProvider.notifier).state = token;
                         ref.read(apiClientProvider).accessToken = token;
 
-                        if (mounted)
+                        if (mounted) {
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text('Bem-vindo, ${user.displayName}!'),
                             ),
                           );
+                        }
 
                         setState(() {
                           _loading = false;

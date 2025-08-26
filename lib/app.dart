@@ -1,6 +1,5 @@
 import 'package:bluequest_app/core/theme/app_theme.dart';
 import 'package:bluequest_app/routes/app_router.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
