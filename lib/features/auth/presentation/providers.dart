@@ -4,7 +4,9 @@ import 'package:bluequest_app/features/auth/infrastructure/datasource/auth_remot
 import 'package:bluequest_app/features/auth/infrastructure/repositories/auth_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final apiClientProvider = Provider((ref) => ApiClient('http://localhost:3000'));
+final apiClientProvider = Provider(
+  (ref) => ApiClient('http://localhost:3000/api'),
+);
 final authRemoteProvider = Provider(
   (ref) => AuthRemoteDataSource(ref.read(apiClientProvider)),
 );
