@@ -10,7 +10,26 @@ class ApiClient {
           baseUrl: baseUrl,
           connectTimeout: const Duration(seconds: 10),
         ),
-      );
+      ) {
+    _dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (o, h) {
+          print('HTTP ${o.method} ${o.uri} body=${o.data}');
+          h.next(o);
+        },
+        onResponse: (r, h) {
+          print('RES ${r.statusCode} ${r.requestOptions.uri}');
+          h.next(r);
+        },
+        onError: (e, h) {
+          print(
+            'ERR ${e.response?.statusCode} ${e.requestOptions.method} ${e.requestOptions.uri} data=${e.response?.data}',
+          );
+          h.next(e);
+        },
+      ),
+    );
+  }
 
   set accessToken(String? token) => _accessToken = token;
 

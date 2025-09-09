@@ -6,7 +6,11 @@
     "timezone": "Fuso horário",
     "login": "Entrar",
     "register": "Criar conta",
+    "haveAccount": "Já tem conta? Entrar",
+    "noAccount": "Não tem conta? Criar",
+    "registerAndContinue": "Criar conta e continuar",
+    "registerSuccess": "Conta criada com sucesso!",
     "challenges": "Desafios",
     "today": "Hoje",
-    "createChallenge": "Criar desafio"
+    "createChallenge": "Criar desafio",
 }
